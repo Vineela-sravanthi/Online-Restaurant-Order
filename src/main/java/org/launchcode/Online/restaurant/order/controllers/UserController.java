@@ -71,4 +71,9 @@ public class UserController {
         return "user/home";
     }
 
+    @RequestMapping(value = "logout")
+    public String logout(){
+        return "user/login";
+    }
+
 }
