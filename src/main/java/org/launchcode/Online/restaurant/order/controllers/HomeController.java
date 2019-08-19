@@ -13,4 +13,9 @@ public class HomeController {
 
         return "home/index";
     }
+
+    @RequestMapping(value = "contactus")
+    public String contact() {
+        return "home/contactus";
+    }
 }
