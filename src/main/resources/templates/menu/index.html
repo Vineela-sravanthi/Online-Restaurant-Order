@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+    <head th:replace="fragments :: head"></head>
+    <body class="container">
+
+        <center><h1 th:text="${title}"></h1></center>
+
+        <p th:unless="${items} and ${items.size()}">no items:(</p>
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Category</th>
+
+                    </tr>
+                </thead>
+                <tr th:each="item : ${items}">
+                    <td th:text="${item.itemName}"></td>
+                    <td th:text="${item.itemDescription}"></td>
+                    <td th:text="${item.price}"></td>
+                    <td th:text="${item.category.name}"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
