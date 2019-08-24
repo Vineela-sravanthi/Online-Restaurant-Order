@@ -34,12 +34,9 @@ public class Menu {
         this.price = price;
     }
 
-
-
     public Menu() {
 
     }
-
 
     public String getItemName() {
         return itemName;
