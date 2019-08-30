@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}">Default title</h1>
+<h2 th:text="'Registration Successful.Please click below link to login'"></h2>
+<a href="/admin/login">Admin Login</a>
+</body>
+</html>
