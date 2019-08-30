@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-<body>
-<h1 th:text="${title}">Default title</h1>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/user/home">Home</a></li>
+            <li><a href="/user/home">Home</a></li>
             <li><a href="/menu">Menu</a></li>
             <li><a href="/order/add">Add to cart</a></li>
-            <li><a href="/order/view">View cart</a></li>
+            <li class="active"><a href="/order/view">View cart</a></li>
             <li><a href="/user/login">Logout</a></li>
         </ul>
     </div>
 </nav>
 
-<div class="container" text-align="center">
-    <h1 th:text="'Welcome User'"></h1>
-</div>
-
+<body>
+<h1 th:text="${title}">Default title</h1>
+<h2 th:text="'Your Order has been placed Successfully and it will be ready in 30 minutes. Thank you for your order.'"></h2>
 </body>
 </html>

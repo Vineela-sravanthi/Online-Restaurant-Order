@@ -19,8 +19,10 @@ public class Category {
     @OneToMany
     @JoinColumn(name = "category_id")
     private List<Menu> items = new ArrayList<>();
+
     public Category() {
     }
+
     public Category(String name) {
         this.name = name;
     }
@@ -36,6 +38,7 @@ public class Category {
     public int getId() {
         return id;
     }
+
     public List<Menu> getItems() {
         return items;
     }
