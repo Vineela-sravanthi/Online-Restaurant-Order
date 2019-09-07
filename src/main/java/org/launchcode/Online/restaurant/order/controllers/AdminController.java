@@ -76,4 +76,9 @@ public class AdminController {
         return "admin/login";
     }
 
+    @RequestMapping(value = "vieworder")
+    public String adminview() {
+        return "admin/vieworder";
+    }
+
 }

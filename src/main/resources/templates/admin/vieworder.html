@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"></h1>
+<p th:unless="${orders} and ${orders.size()}">no Orders:(</p>
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>User Name</th>
+        </tr>
+        </thead>
+        <tr th:each="aorder : ${orders}">
+            <td th:text="${aorder.order.getItemName()}"></td>
+            <td th:text="${aorder.order.getQuantity()}"></td>
+            <td th:text="${aorder.user.getUsername()}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
