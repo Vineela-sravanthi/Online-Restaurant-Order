@@ -1,10 +1,11 @@
-package org.launchcode.Online.restaurant.order.models;
+package org.launchcode.Online.restaurant.order.models.forms;
 
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -13,11 +14,11 @@ public class User  {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 
     @NotNull
     @Size(min=5,max=15)
-    private String username;
+    private String name;
 
     @NotNull
     @Email
@@ -26,6 +27,12 @@ public class User  {
     @NotNull
     @Size(min=6,message="password must contain atleast 6 characters")
     private String password;
+
+    @Transient
+    private String verifyPassword;
+
+    @NotNull
+    private Boolean active;
 
     public User(){
 
@@ -37,12 +44,20 @@ public class User  {
         this.password = "";
     } */
 
-    public String getUsername() {
-        return username;
+    public Long getId() {
+        return id;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -60,5 +75,20 @@ public class User  {
     public void setPassword(String password) {
         this.password = password;
     }
-}
 
+    public String getVerifyPassword() {
+        return verifyPassword;
+    }
+
+    public void setVerifyPassword(String verifyPassword) {
+        this.verifyPassword = verifyPassword;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+}
