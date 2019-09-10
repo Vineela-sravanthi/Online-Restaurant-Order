@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head th:replace="fragments :: head"></head>
 <body>
 <h1 th:text="${title}">Default title</h1>
@@ -17,7 +17,7 @@
 </nav>
 
 <div class="container" text-align="center">
-    <h1 th:text="'Welcome User'"></h1>
+    <h1 th:text="'Welcome User!'"></h1>
 </div>
 
 </body>

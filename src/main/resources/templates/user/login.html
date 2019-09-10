@@ -18,11 +18,11 @@
 </nav>
 <h1 th:text="${title}">Default title</h1>
 
-<form method="post" th:action="@{/user/home}" style="max-width:600px;" th:object="${user}">
+<form method="post" th:action="${'/user/login'}" style="max-width:600px;" th:object="${userForm}">
     <div class="form-group">
-        <label th:for="username">UserName</label>
-        <input class="form-control" id="name-field" type="text"  th:field="*{username}" />
-        <span th:errors="*{username}" class="error"></span>
+        <label th:for="email">Email</label>
+        <input class="form-control" id="email-field" type="text"  th:field="*{email}" />
+        <span th:errors="*{email}" class="error"></span>
     </div>
 
     <div class="form-group">
