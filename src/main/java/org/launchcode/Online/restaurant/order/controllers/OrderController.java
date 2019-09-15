@@ -48,7 +48,8 @@ public class OrderController {
             return "order/add";
         }
         orderDao.save(newOrder);
-        return "order/addordermsg";
+        model.addAttribute("orders", orderDao.findAll());
+        return "order/view";
 
     }
 }

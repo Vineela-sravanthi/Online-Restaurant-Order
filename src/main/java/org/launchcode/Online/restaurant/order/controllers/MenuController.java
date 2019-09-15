@@ -35,6 +35,29 @@ public class MenuController {
 
     }
 
+    @RequestMapping(value="usermenu")
+    public String displaymenu(Model model){
+
+
+        model.addAttribute("items", menuDao.findAll());
+
+        model.addAttribute("title","Thai Restaurant Menu");
+        return "menu/usermenu";
+
+    }
+
+
+    @RequestMapping(value="adminmenu")
+    public String displayadmenu(Model model){
+
+
+        model.addAttribute("items", menuDao.findAll());
+
+        model.addAttribute("title","Thai Restaurant Menu");
+        return "menu/adminmenu";
+
+    }
+
     @RequestMapping(value="add" ,method= RequestMethod.GET)
     public String displayAddItemForm(Model model){
         model.addAttribute("title","Add Item");
