@@ -34,6 +34,7 @@ public class MenuController {
         return "menu/index";
 
     }
+
     @RequestMapping(value="add" ,method= RequestMethod.GET)
     public String displayAddItemForm(Model model){
         model.addAttribute("title","Add Item");
