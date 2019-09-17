@@ -57,7 +57,7 @@ public class MenuController {
     @RequestMapping(value="remove" ,method= RequestMethod.GET)
     public String removeItem(Model model) {
         model.addAttribute("items", menuDao.findAll());
-        model.addAttribute("title", "Remove Cheese");
+        model.addAttribute("title", "Remove Item");
 
         return "menu/remove";
     }

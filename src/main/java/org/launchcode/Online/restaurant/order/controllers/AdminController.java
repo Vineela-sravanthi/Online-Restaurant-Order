@@ -63,6 +63,13 @@ public class AdminController {
         }
         adminDao.save(admin);
         return "admin/home";
+
+
+
+
+
+
+
     }
 
     @RequestMapping(value = "home")
